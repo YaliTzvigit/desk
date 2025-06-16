@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Boostrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Style -->
+    <link rel="stylesheet" href="../static/css/index.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIB - Accueil </title>
+</head>
+<body>
+    
+    <!-- call navbar -->
+    <div id="nav-index"></div>
+    <script>
+        fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-index').innerHTML = data
+        })
+    </script>
+
+<!-- Hero section -->
+<section class="hero" id="hero">
+        <div class="slogan">
+            <h1 class="h-slog" style="color: #333;">
+                L'innovation technologique au service de nos 
+                clients est <span style="color: #317cE7;"> notre devise. </span>
+            </h1>
+            <p class="p-slog" style="color: #333;font-weight: 400;width: 80%;">
+                Nous mettons tout en œuvre pour vous offrir des solutions
+                sur-mesure adaptées à vos besoins et à l'évolution constante du marché.
+            </p>
+        </div>
+        <!-- Bulles en background -->
+        <div class="bubbles">
+          <div class="bubble" id="bubble1"></div>
+          <div class="bubble" id="bubble2"></div>
+          <div class="bubble" id="bubble3"></div>
+        </div>
+        <!-- Styles particuliers -->
+        <div class="img">
+            <div class="dia">
+                <img src="../static/img/ai-image.jpg" class="img1" alt="">
+                <img src="../static/img/cloud.jpg" alt="" class="img2">
+            </div>
+            <div class="di">
+                <img src="../static/img/ui-ux.jpg" alt="">
+            </div>
+        </div>
+
+</section>
+
+
+<br>
+<br>
+
+<!-- Services -->
+<h2 class="h-serv" id="services"> Services </h2>
+<p class="p-serv">
+    Votre partenaire IT pour relever les défis technologiques d'aujourd'hui et demain.
+</p>
+
+<br>
+<br>
+
+
+<!-- Propostion de services -->
+<section class="services">
+    <div class="cols">
+        <div class="col1">
+            <h3 class="titre-serv">Infographie</h3>
+            <p class="desc-serv">
+                Donne vie à une passion, une activité secondaire ou 
+                une nouvelle compétence professionnelle avec des milliers de cours de design, 
+                de commerce et plus encore.
+            </p>
+            <div class="sep-s"></div>
+            <div class="items-serv">
+                <span class="its-serv">Web Design</span>
+                <span class="its-serv">UI / UX</span>
+                <span class="its-serv">Templates</span>
+            </div>
+        </div>
+        <img src="../static/img/design-info-removebg-preview.png" alt="infodesign" />
+    </div>
+    <div class="cols">
+        <div class="col1">
+            <h3 class="titre-serv">Développements d'Applications</h3>
+            <p class="desc-serv">
+                AIB, société informatique avec plus de 32 ans d'existence dans le développement web et développement de logiciels, 
+                nous vous accompagnons dans la mise en œuvre de vos projets informatiques.
+            </p>
+            <div class="sep-s"></div>
+            <div class="items-serv">
+                <span class="its-serv">Web</span>
+                <span class="its-serv">Mobile</span>
+                <span class="its-serv">Bureautique</span>
+                <span class="its-serv">Logiciel</span>
+            </div>
+        </div>
+        <img src="../static/img/developer-appli.png" alt="3D" />
+    </div>
+
+    <div class="cols">
+        <div class="col1">
+            <h3 class="titre-serv">Réseaux & Systèmes</h3>
+            <p class="desc-serv">
+                Votre métier exige un accès aux applications de l’entreprise et 
+                à ses données de manière fluide et ininterrompue ? 
+                Nous configurons une architecture informatique qui offre à vos collaborateurs 
+                un environnement de travail performant, fondé sur la rapidité d’accès et la sécurité.
+            </p>
+            <div class="sep-s"></div>
+            <div class="items-serv">
+                <span class="its-serv">Infrastructure</span>
+                <span class="its-serv">Sécurité</span>
+                <span class="its-serv">Maintenance</span>
+            </div>
+        </div>
+        <img src="../static/img/security.svg" alt="security" />
+    </div>
+
+    <div class="cols">
+        <div class="col1">
+            <h3 class="titre-serv">Ventes de matériels informatiques</h3>
+            <p class="desc-serv">
+                Nous fournissons une large gamme de matériels informatiques et d’accessoires adaptés aux besoins professionnels : 
+                ordinateurs, imprimantes, périphériques, et bien plus encore.
+            </p>
+            <div class="sep-s"></div>
+            <div class="items-serv">
+                <span class="its-serv">Ordinateurs</span>
+                <span class="its-serv">Imprimantes</span>
+                <span class="its-serv">Accessoires</span>
+            </div>
+        </div>
+        <img src="../static/img/materiels.jpg" alt="materiels" />
+    </div>
+    
+</section>
+
+<br>
+<br>
+
+<!-- Solutions -->
+<h2 class="titre-solux">Solutions - AIB </h2>
+<p class="p-solux">
+    Nos solutions sont conçues pour s'adapter à vos besoins métiers, 
+    tout en garantissant performance, sécurité et évolutivité.
+</p>
+
+<section class="solutions" id="solutions">
+  
+    <div class="cards-solux">
+
+        <div class="content-solux">
+          <img src="../static/svg/cloudapp.svg" alt="cloud-ap" />
+            <h3 class="h-solux">
+                Application Cloud Hybride
+            </h3>
+            <p class="def-solux">
+                Optimisez la productivité en permettant aux développeurs de créer et déployer des applications de la même façon, 
+                que celles-ci s'exécutent sur Azure ou sur Azure Stack
+            </p>
+        </div>
+        <div class="content-solux">
+          <img src="../static/svg/DevOps.svg" alt="DevOps" />
+            <h3 class="h-solux">
+                DevOps
+            </h3>
+            <p class="def-solux">
+                Réunissez les personnes, 
+                les processus et les produits pour apporter à vos utilisateurs finaux une valeur ajoutée constante
+            </p>
+        </div>
+        <div class="content-solux">
+          <img src="../static/svg/mobile.svg" alt="mobile" />
+            <h3 class="h-solux">
+                Mobile
+            </h3>
+            <p class="def-solux">
+                Contactez vos clients où qu’ils soient, sur l’ensemble des appareils, 
+                avec une unique version de l’application mobile
+            </p>
+        </div>
+
+        <div class="content-solux">
+          <img src="../static/svg/commerce.svg" alt="commerce" />
+            <h3 class="h-solux">
+                Commerce Electronique 
+            </h3>
+            <p class="def-solux">
+                Optimisez la productivité en permettant aux développeurs de créer et déployer des applications de la même façon, 
+                que celles-ci s’exécutent sur Azure ou sur Azure Stack
+            </p>
+        </div>
+
+        <div class="content-solux">
+          <img src="../static/svg/gouvernance.svg" alt="gouvernance" />
+            <h3 class="h-solux">
+                Gouvernance Azure 
+            </h3>
+            <p class="def-solux">
+                Veillez à la conformité à l’aide 
+                des fonctionnalités de gouvernance intégrée dans Azure
+            </p>
+        </div>
+
+        <div class="content-solux">
+          <img src="../static/svg/coder.svg" alt="coder" />
+            <h3 class="h-solux">
+                Développements & Tests 
+            </h3>
+            <p class="def-solux">
+                Simplifiez et accélérez la création et 
+                le test des applications sur l’ensemble des plateformes
+            </p>
+        </div>
+
+        <div class="content-solux">
+          <img src="../static/svg/activity.svg" alt="grown-activity" />
+            <h3 class="h-solux">
+                Continuité d'activité 
+            </h3>
+            <p class="def-solux">
+                Protégez vos principaux systèmes informatiques tout en ayant la garantie 
+                que vos applications fonctionnent lorsque vous en avez besoin
+            </p>
+        </div>
+
+        <div class="content-solux">
+          <img src="../static/svg/cloud-upload.svg" alt="cloud-upload" />
+            <h3 class="h-solux">
+                Migration Azure 
+            </h3>
+            <p class="def-solux">
+                Rejoignez des milliers de clients qui migrent vers Azure en utilisant une méthodologie éprouvée, des outils de Microsoft. 
+                Nous sommes vous aiderons pendant la migration.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<br>
+<br>
+<br>
+
+<!-- Blog -->
+<h2 class="titre-blog"> Le Blog  </h2>
+<p class="p-blog"> AIB : Toutes les dernières nouvelles </p>
+
+<!-- card blog -->
+<section class="blog-aib">
+
+<div class="card">
+    <div class="date-time-container">
+      <time class="date-time" datetime="2022-10-10">
+        <span>2022</span>
+        <span class="separator"></span>
+        <span>Oct 10</span>
+      </time>
+    </div>
+    <div class="content">
+    
+      <div class="infos">
+        <a href="#">
+          <span class="title">
+           L'IA générative révolutionne le développement logiciel : 
+           quand ChatGPT rencontre GitHub Copilot
+          </span>
+        </a>
+  
+        <p class="description">
+          Découvrez comment les développeurs 
+          utilisent désormais l'intelligence artificielle 
+          pour accélérer leur productivité de 40%. 
+          Entre automatisation du code, génération de tests et documentation intelligente, 
+          explorez les outils qui transforment notre façon de programmer.
+        </p>
+      </div>
+  
+        <a class="action" href="#">
+          Lire le Blog
+        </a>
+    </div>
+</div>
+
+<div class="card">
+    <div class="date-time-container">
+      <time class="date-time" datetime="2022-10-10">
+        <span>2022</span>
+        <span class="separator"></span>
+        <span>Oct 10</span>
+      </time>
+    </div>
+    <div class="content">
+    
+      <div class="infos">
+        <a href="#">
+          <span class="title">
+           Edge Computing : 
+           pourquoi vos données n'ont plus besoin du cloud
+          </span>
+        </a>
+  
+        <p class="description">
+          Latence réduite, sécurité renforcée, coûts optimisés... L'edge computing redéfinit l'architecture IT moderne. 
+          Analysons les cas d'usage concrets où traiter les données à la périphérie devient un avantage concurrentiel 
+          décisif pour les entreprises.
+        </p>
+      </div>
+  
+        <a class="action" href="#">
+          Lire le Blog
+        </a>
+    </div>
+</div>
+
+<div class="card">
+    <div class="date-time-container">
+      <time class="date-time" datetime="2022-10-10">
+        <span>2022</span>
+        <span class="separator"></span>
+        <span>Oct 10</span>
+      </time>
+    </div>
+    <div class="content">
+    
+      <div class="infos">
+        <a href="#">
+          <span class="title">
+           Kubernetes vs Docker Swarm en 2025 : le match de l'orchestration
+          </span>
+        </a>
+  
+        <p class="description">
+          Face à l'explosion des microservices, choisir son orchestrateur devient crucial. 
+          Comparaison détaillée des performances, de la complexité et des écosystèmes de ces deux géants. 
+          Quel est le meilleur choix pour votre infrastructure ?
+        </p>
+      </div>
+  
+        <a class="action" href="#">
+          Lire le Blog
+        </a>
+    </div>
+</div>
+
+</section>
+
+<br>
+<br>
+
+<button class="see-blog" onclick="window.location.href='see-blog.html'">
+ Plus d'actualités &raquo;
+</button>
+
+
+<br>
+<br>
+
+<!-- Footer -->
+<div id="pied-index"></div>
+<script>
+    fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('pied-index').innerHTML = data
+    })
+</script>
+
+<button class="scroll-to-top" id="scrollToTop" aria-label="Remonter en haut de la page">
+  <!-- Icône Chevron Up de Lucide -->
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m18 15-6-6-6 6"/>
+  </svg>
+</button>
+
+<!-- script -->
+<script src="../static/js/index.js">
+  /* for index.js */
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+<script src="../static/js/hero-section.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Démo card hover border animée</title>
+<style>
+  :root {
+    --color-main-light: #b05cff;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f0f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  .content-solux {
+    position: relative;
+    flex: 0 0 calc(25% - (3 * 1rem / 4));
+    max-width: calc(25% - (3 * 1rem / 4));
+    box-sizing: border-box;
+    padding: 20px;
+    border: 1px solid var(--color-main-light);
+    width: 300px;
+    height: 270px;
+    background: white;
+    cursor: pointer;
+    clip-path: polygon(
+      0 0,
+      calc(100% - 20px) 0,
+      100% 20px,
+      100% 100%,
+      20px 100%,
+      0 calc(100% - 20px)
+    );
+    transition: transform 0.3s ease;
+    overflow: visible;
+  }
+
+  /* Bordure animée avec ::before */
+  .content-solux::before {
+    content: '';
+    position: absolute;
+    top: -4px; left: -4px; right: -4px; bottom: -4px;
+    border: 2px solid transparent;
+    clip-path: polygon(
+      0 0,
+      calc(100% - 20px) 0,
+      100% 20px,
+      100% 100%,
+      20px 100%,
+      0 calc(100% - 20px)
+    );
+    transition: border-color 0.3s ease;
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  .content-solux:hover::before {
+    border-color: var(--color-main-light);
+  }
+
+  .content-solux:hover {
+    transform: scale(1.05);
+  }
+
+  /* Styles du contenu interne */
+  .content-solux img {
+    max-width: 80px;
+    margin-bottom: 15px;
+    display: block;
+  }
+
+  .h-solux {
+    font-size: 1.3rem;
+    color: #333;
+    margin: 0 0 10px;
+  }
+
+  .def-solux {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="content-solux">
+  <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" alt="cloud-ap" />
+  <h3 class="h-solux">
+    Application Cloud Hybride
+  </h3>
+  <p class="def-solux">
+    Optimisez la productivité en permettant aux développeurs de créer et déployer des applications de la même façon, que celles-ci s'exécutent sur Azure ou sur Azure Stack.
+  </p>
+</div>
+
+</body>
+</html>

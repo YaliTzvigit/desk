@@ -1,0 +1,9 @@
+
+.footer {
+    margin-top: 50px;
+    text-align: center;
+    padding: 1rem;
+    background: var(--color-main);
+    color: whitesmoke;
+    font-size: 16px;
+}

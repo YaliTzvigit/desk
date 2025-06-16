@@ -1,0 +1,148 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color-main: #317ce7;
+    --color-main-light: #317de758;
+    --second-light: #5494ee45;
+    --second-color: #295899;
+    --yellow: rgba(250, 204, 21, 1);
+    --font-main: "Inter Tight", sans-serif !important;
+    --second-font: "Ubuntu", sans-serif;
+    --size-titre: 2.2rem;
+    --bg-color: white;
+}
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+}
+
+.hero-ct {
+    background: url('../img/services.jpg') fixed center/cover no-repeat;
+    padding: 80px 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+  }
+  
+  .hero-ct::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .hero-ct h1 {
+      font-size: 2.4rem;
+      text-transform: uppercase;
+  }
+  
+  .titre-ct,
+  .contact {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .talk {
+    margin-top: 50px !important;
+    font-size: 2.3rem;
+    color: #333;
+    font-weight: bold;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+/* formualaire */
+
+.mail-aib {
+    text-decoration: none;
+    color: var(--yellow);
+} 
+
+.card-custom {
+    border: 1px solid var(--color-main-light);
+    border-radius: 15px;
+    transition: transform 0.2s ease;
+  }
+
+  .card-custom:hover {
+    transform: scale(1.01);
+  }
+
+  .form-control, .form-select {
+    border-radius: 10px;
+    padding: 12px;
+    transition: .2s ease;
+  }
+
+  .form-control:focus {
+    box-shadow: none;
+    outline: none;
+    border: 1px solid var(--color-main-light);
+    border-radius: 10px;
+  }
+
+  .form-select:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid var(--second-color);
+  }  
+
+  .form-select option:hover {
+    background: var(--color-main-light) !important;
+  }
+
+  .btn-primary {
+    border-radius: 10px;
+    padding: 12px 30px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+
+  .btn-primary:hover {
+    background-color: #004080;
+  }
+
+  .contact-info i {
+    font-size: 2rem;
+    color: var(--color-main);
+    margin-right: 10px;
+  }
+
+  .send-demandes {
+    border-radius: 0;
+    background: var(--color-main);
+    padding: 0.8rem;
+    color: whitesmoke;
+    font-size: 15px;
+    transition: .3s ease-in-out;
+  }
+
+  .send-demandes:hover {
+    border: 1px solid var(--color-main);
+    color: var(--color-main);
+    border-radius: 10px;
+  }
+
+  label {
+    font-size: 0.9rem;
+  }
+
+
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+}

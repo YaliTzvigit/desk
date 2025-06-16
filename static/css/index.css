@@ -1,0 +1,721 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color-main: #317ce7;
+    --color-main-light: #317de758;
+    --second-light: #5494ee45;
+    --second-color: #295899;
+    --yellow: rgba(250, 204, 21, 1);
+    --font-main: "Inter Tight", sans-serif !important;
+    --second-font: "Ubuntu", sans-serif;
+    --size-titre: 2.2rem;
+    --bg-color: white;
+}
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+body {
+    font-family: var(--font-main);
+}
+
+/* Hero section */
+.hero {
+  margin-top: 70px;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero img {
+  width: 270px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.p-slog {
+  margin-top: 20px;
+}
+
+.img {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 2;
+}
+
+.img .dia {
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
+  position: relative;
+}
+
+.di {
+  position: relative;
+}
+
+.img1 {
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+}
+
+.img2 {
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.di > img {
+  border-radius: 50px;
+}
+
+/* bulles tournante */
+        /* Conteneur des bulles en arrière-plan */
+        .bubbles {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Les 3 bulles qui tournent */
+        .bubble {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--second-light);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(108, 99, 255, 0.1);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .bubble::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            filter: blur(2px);
+        }
+
+        @media (max-width: 768px) {
+            .img {
+                flex-direction: column;
+                gap: 3rem;
+            }
+            
+            .dia {
+                flex-direction: row;
+                gap: 1.5rem;
+            }
+            
+            .img1, .img2, .di > div {
+                width: 150px;
+                height: 150px;
+            }
+
+            .bubbles-background {
+                width: 400px;
+                height: 400px;
+            }
+
+            .bubble {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+
+/* sections services */
+
+.h-serv {
+    margin-top: 50px;
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.p-serv {
+    text-align: center;
+    font-weight: 300;
+} 
+
+.services {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cols {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.cols > img {
+  width: 250px;
+}
+
+.col1 h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+.col1 > p {
+    width: 90%;
+    margin-top: 20px;
+    color: #333;
+    border-bottom: 1px dashed var(--second-light);
+    padding-bottom: 20px;
+}
+
+.items-serv {
+  display: flex;
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+.items-serv span {
+  color: #777;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+
+/* solutions */
+.titre-solux {
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.p-solux {
+    text-align: center;
+    font-weight: 300;
+    font-size: 15px;
+} 
+
+.solutions {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    gap: 0.5rem;
+    width: 90%;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px dashed var(--color-main-light);
+    padding-right: 10px;
+    width: 300px;
+}
+
+.bt-solux {
+    font-family: var(--second-font) !important;
+    text-transform: uppercase;
+    background: transparent;
+    padding: 0.625rem;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    color: var(--color-main);
+}
+
+.cards-solux {
+  margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 1.5;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.content-solux {
+  position: relative; /* important pour ::before */
+  flex: 0 0 calc(25% - (3 * 1rem / 4));
+  max-width: calc(25% - (3 * 1rem / 4));
+  box-sizing: border-box;
+  padding: 0.625rem;
+  border: 1px solid var(--color-main-light);
+  width: 300px;
+  height: 270px;
+  clip-path: polygon(
+    0 0,                    /* haut gauche */
+    calc(100% - 20px) 0,    /* haut droit coupé */
+    100% 20px,              /* coin haut droit diagonal */
+    100% 100%,              /* bas droit normal */
+    20px 100%,              /* coin bas gauche diagonal */
+    0 calc(100% - 20px)     /* bas gauche coupé */
+  );
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  background: white;
+  overflow: visible;
+}
+
+/* Avant la card : contour animé */
+.content-solux::before {
+  content: '';
+  position: absolute;
+  top: -4px; left: -4px; right: -4px; bottom: -4px;
+  border-radius: 0; /* on ne modifie pas clip-path ici, on adapte avec clip-path */
+  clip-path: polygon(
+    0 0,
+    calc(100% - 20px) 0,
+    100% 20px,
+    100% 100%,
+    20px 100%,
+    0 calc(100% - 20px)
+  );
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Au survol : on remplit la bordure en violet */
+.content-solux:hover::before {
+  border-color: rgb(176, 92, 255);
+}
+
+/* Effet scale sur la card */
+.content-solux:hover {
+  transform: scale(1.05);
+}
+
+
+
+.content-solux img {
+  width: 35px;
+}
+
+.content-solux h3 {
+    margin-top: 10px;
+    text-decoration: 1px underline var(--second-light);
+    font-size: 18px;
+}
+
+.content-solux > p {
+    font-weight: 350;
+    font-size: 16px;
+    margin-top: 20px;
+    color: #333;
+}
+
+@media (max-width: 1200px) {
+  .content-solux {
+    /* 3 cartes par ligne sur des écrans de taille moyenne */
+    flex: 0 0 calc(33.333% - (2 * 1rem / 3)); /* 33.333% pour 3 colonnes */
+    max-width: calc(33.333% - (2 * 1rem / 3));
+  }
+}
+
+@media (max-width: 480px) {
+  .content-solux {
+    /* 1 carte par ligne sur les petits mobiles */
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Blog */
+
+.titre-blog, .p-blog {
+    text-align: center;
+}
+
+.titre-blog {
+    margin-top: 50px;
+    font-size: 1.2rem;
+    font-weight: 350;
+}
+
+.p-blog {
+    font-size: 2.1rem;
+    font-weight: 600;
+}
+
+/* styles blog */
+
+.blog-aib {
+  margin-top: 50px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  border: 1px dashed var(--color-main-light);
+}
+
+.card {
+    margin-top: 50px;
+    box-sizing: border-box;
+    display: flex;
+    max-width: 320px;
+    background-color: rgba(255, 255, 255, 1);
+    transition: all .15s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 10px 10px 30px rgba(182, 182, 182, 0.18);
+  }
+  
+  .card:hover {
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.081);
+  }
+  
+  .date-time-container {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    padding: 0.5rem;
+  }
+  
+  .date-time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 1rem;
+    gap: 1rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgba(17, 24, 39, 1);
+  }
+  
+  .separator {
+    width: 1px;
+    flex: 1 1 0%;
+    background-color: rgba(17, 24, 39, 0.1);
+  }
+  
+  .content {
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .infos {
+    border-left: 1px solid rgba(17, 24, 39, 0.1);
+    padding: 1rem;
+  }
+  
+  .title {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: rgb(28, 34, 49);
+    text-decoration: 1px underline var(--second-light);
+  }
+  
+  .description {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    margin-top: 0.5rem;
+    font-size: 0.895rem;
+    line-height: 1.25rem;
+    color: rgba(55, 65, 81, 1);
+  }
+  
+  .action {
+    display: block;
+    background-color: rgba(250, 204, 21, 1);
+    padding: 0.75rem 1.25rem;
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgba(17, 24, 39, 1);
+    transition: all .15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .action:hover {
+    background-color: rgba(250, 204, 21, 0.804);
+}
+
+/* bouton plus de blog */ 
+
+.see-blog {
+  margin: auto;
+  text-align: center;
+  padding: 1em 1.5em;
+  background: transparent;
+  color: var(--color-main);
+  text-transform: uppercase;
+  position: relative;
+  border: transparent;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  transition: .5s ease;
+  font-family: 'Inter Tight', sans-serif;
+}
+
+.see-blog::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--color-main);
+  transition: 0.5s ease;
+}
+
+.see-blog:hover {
+  color: whitesmoke;
+  transition-delay: 0.3s;
+  font-size: 15px;
+  font-weight: 480;
+}
+
+.see-blog:hover::before {
+  width: 100%;
+}
+
+.see-blog::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: var(--color-main);
+  transition: 0.4s ease;
+  z-index: -1;
+}
+
+.see-blog:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: aliceblue;
+}
+
+/* bouton go to up */
+        .scroll-to-top {
+          position: fixed;
+          bottom: 30px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 50px;
+          height: 50px;
+          background: var(--color-main);
+          color: white;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+        }
+
+        .scroll-to-top.visible {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        .scroll-to-top:hover {
+          background: var(--second-color);
+          transform: translateX(-50%) translateY(-2px);
+          box-shadow: 0 6px 16px rgba(0, 123, 255, 0.4);
+        }
+
+        .scroll-to-top svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Animation d'apparition */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+
+        .scroll-to-top.visible {
+            animation: fadeInUp 0.3s ease;
+        }
+/* From Uiverse.io by joe-watson-sbf */ 
+
+
+/* footer */
+
+/* Responsive improvements */
+
+/* Hero section responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .p-slog {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .img {
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+
+  .img .dia {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .img1, .img2, .di > img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Services section responsive */
+@media (max-width: 768px) {
+  .cols {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cols > img {
+    width: 100%;
+    max-width: 300px;
+    margin: 1rem auto 0 auto;
+    border-radius: 0%;
+  }
+
+  .col1 > p {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .items-serv {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Solutions section responsive */
+@media (max-width: 1200px) {
+  .content-solux {
+    flex: 0 0 calc(33.333% - (2 * 1rem / 3));
+    max-width: calc(33.333% - (2 * 1rem / 3));
+  }
+}
+
+@media (max-width: 768px) {
+  .solutions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards-solux {
+    justify-content: center;
+  }
+
+  .content-solux {
+    flex: 0 0 80%;
+    max-width: 80%;
+    height: 200px;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-solux {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Blog section responsive */
+@media (max-width: 768px) {
+  .blog-aib {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+
+  .card {
+    max-width: 80%;
+    flex-direction: column;
+  }
+
+  .date-time-container {
+    writing-mode: horizontal-tb;
+    transform: none;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--color-main-light);
+  }
+
+  .infos {
+    border-left: none;
+    padding: 1rem 0;
+  }
+
+  .action {
+    margin-top: 1rem;
+  }
+}
+
+/* Button adjustments */
+@media (max-width: 480px) {
+  .see-blog {
+    font-size: 0.9rem;
+    padding: 0.75em 1em;
+  }
+}
+
+/* General image responsiveness */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+

@@ -1,0 +1,77 @@
+
+
+<!-- Bar de navigation général -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - nav </title>
+    <link rel="stylesheet" href="../static/css/navbar.css" />
+</head>
+<body>
+    
+    <div class="navi">
+        <nav class="bar-n">
+            <a href="/templates/" class="logo-4">
+                A<span class="letter-i">I</span>B
+            </a>
+            <span class="ibm" style="color: whitesmoke;">27 22 23 45 56</span>
+            <span class="ibm" style="color: whitesmoke;">aib-infos@gmail.com</span>
+        </nav>
+        <div class="menu-bar-n">
+            <input id="checkbox2" type="checkbox">
+            <label class="toggle2" for="checkbox2">
+                <div id="bar4" class="bars"></div>
+                <div id="bar5" class="bars"></div>
+                <div id="bar6" class="bars"></div>
+                <div></div>
+            </label>
+
+        <!-- Menu coulissant -->
+        <div class="side-menu">
+            <div class="menu-header">
+                <div class="menu-title">AIB</div>
+                <div class="menu-subtitle">Artificial Intelligence Business</div>
+                <button class="close-btn" onclick="document.getElementById('checkbox2').checked = false;">×</button>
+            </div>
+            
+            <nav class="menu-nav">
+                <a href="index.html" class="menu-item">
+                    Accueil
+                </a>
+                <a href="formations.html" class="menu-item">
+                    Formations
+                </a>
+                <a href="#solutions" class="menu-item">
+                    Nos Solutions
+                </a>
+                <a href="#services" class="menu-item">
+                     Services
+                </a>
+                <div class="menu-separator"></div>
+                <a href="#blog" class="menu-item">
+                     Blog
+                </a>
+                <a href="recrutement.html" class="menu-item">
+                     Recrutement
+                </a>
+                <a href="contact-page.html" class="menu-item">
+                    Nous Contacter
+                </a>
+                <a href="about-us.html" class="menu-item">
+                    Qui sommes-nous ?
+                </a>
+            </nav>
+        </div>
+
+        <!-- Overlay -->
+        <div class="overlay" onclick="document.getElementById('checkbox2').checked = false;"></div>
+        <!-- Slide Menu -->
+
+        </div>
+    </div>
+
+</body>
+</html>

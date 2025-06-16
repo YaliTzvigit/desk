@@ -1,0 +1,298 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color-main: #317ce7;
+    --color-main-light: #317de758;
+    --second-light: #5494ee45;
+    --second-color: #295899;
+    --yellow: rgba(250, 204, 21, 1);
+    --font-main: "Inter Tight", sans-serif !important;
+    --second-font: "Ubuntu", sans-serif;
+    --size-titre: 2.2rem;
+    --bg-color: white;
+}
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+}
+
+
+#hero-recru {
+}
+
+.img-fluid {
+  animation: float 5s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.parag h1 {
+color: var(--color-main);
+}
+
+.parag p {
+font-weight: 380;
+width: 95%;
+}
+
+/* offres */
+.emploi {
+    background: url('../img/work.jpg') fixed center/cover no-repeat;
+    padding: 100px 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.emploi::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.253);
+}
+
+.emploi h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white !important;
+}
+
+.arrow-down {
+    font-size: 2.5rem;
+    color: whitesmoke;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    transition: .3s ease;
+}
+
+
+/* offres */
+
+.offres {
+    margin-left: 30px;
+    padding: 15px;
+    flex-direction: column;
+    display: flex;
+    margin-top: 50px;
+} 
+
+.consulter {
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.p-consulter {
+    margin-top: 40px;
+}
+
+#we-hiring {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.postes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.postes-cards {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: auto;
+    border: 1px solid var(--color-main-light);
+}
+
+.btn-plus {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-main-light);
+    color: #000;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0;
+    line-height: 30px;
+    text-align: center;
+   /* border-left: 1px solid var(--color-main-light);
+    border-bottom: 1px solid var(--color-main-light); */
+  }
+  
+  .btn-plus:hover {
+    background-color: var(--color-main);
+    color: #fff;
+  }
+
+.t-poste, .desc-poste {
+    padding: 10px;
+}
+
+.sp-poste {
+    text-decoration: underline;
+    font-size: 20px;
+    color: var(--color-main);
+}
+
+.desc-poste {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.je-veux {
+    width: 100%;
+    padding: 10px;
+    background: var(--yellow);
+    color: #333;
+    font-weight: bold;
+    border: transparent;
+}
+
+/* Postuler en ligne */
+.online-hire {
+    margin-top: 50px;
+}
+
+.p-online {
+    margin: auto;
+    padding: 1.2rem;
+    border: 1px dashed var(--second-color);
+    font-size: 40px;
+    text-align: center;
+    color: var(--second-color);
+    width: 80%;
+
+    clip-path: polygon(
+        0 0,                    /* haut gauche */
+        calc(100% - 20px) 0,    /* haut droit coupé */
+        100% 20px,              /* coin haut droit diagonal */
+        100% 100%,              /* bas droit normal */
+        20px 100%,              /* coin bas gauche diagonal */
+        0 calc(100% - 20px)     /* bas gauche coupé */
+    );
+}
+
+.input-flat {
+    border-radius: 0 !important;  /* pas de bords arrondis */
+    margin-bottom: 12px;          /* marge verticale */
+    transition: .2s ease-in-out;
+    padding: 10px;
+}
+
+.input-flat:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px dashed var(--second-color);
+}
+
+.send-poste {
+    padding: 0.8rem;
+    background: var(--color-main);
+    width: 200px;
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.send-poste:hover{
+    border: 1px solid var(--color-main);
+    color: var(--color-main);
+}
+
+#footer-r {
+    margin-top: 50px;
+}
+
+  @media (max-width: 576px) {
+    #form-work .row > div {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+
+/* animation */
+@keyframes bounce {
+    0%, 100% {
+      transform: translateX(-50%) translateY(0);
+    }
+    50% {
+      transform: translateX(-50%) translateY(10px);
+    }
+  }
+
+  .arrow-down:hover {
+    color: #0056b3;
+}
+
+/* Responsive improvements */
+
+@media (max-width: 992px) {
+  .postes {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .postes-cards {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .emploi {
+    padding: 50px 20px;
+  }
+
+  .emploi h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #hero-recru .row > div {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .p-consulter {
+    font-size: 1rem;
+  }
+
+  .h-emploi {
+    font-size: 1.5rem;
+  }
+
+  form#form-work {
+    padding: 0 1rem;
+  }
+
+  .send-poste {
+    width: 100%;
+  }
+}

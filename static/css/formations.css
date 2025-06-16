@@ -1,0 +1,357 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --color-main: #317ce7;
+    --color-main-light: #317de758;
+    --second-light: #5494ee45;
+    --second-color: #295899;
+    --yellow: rgba(250, 204, 21, 1);
+    --font-main: "Inter Tight", sans-serif !important;
+    --second-font: "Ubuntu", sans-serif;
+    --size-titre: 2.2rem;
+    --bg-color: white;
+}
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: var(--font-main);
+}
+
+.hero-f {
+    background: url('../img/formations.jpg') fixed center/cover no-repeat;
+    padding: 80px 20px;
+    color: whitesmoke;
+    text-align: center;
+    position: relative;
+}
+
+
+.hero-f::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.05);
+}
+  
+.hero-f h1 {
+    font-size: 3rem;
+    text-transform: uppercase;  
+}
+
+/* image hero */
+#img-fluid {
+  animation: float 5s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* planified */
+.planif {
+    padding: 3rem 1rem;
+    margin: auto;
+    width: 90%;
+    margin-top: 50px;
+}
+
+.h-planif {
+    color: var(--color-main);
+    font-size: 2.5rem;
+    font-weight: 600;
+    border-bottom: 1px dashed var(--color-main-light);
+    width: 50%;
+    padding-bottom: 5px;
+}
+
+.cards-planif {
+    display: grid;
+    grid-template-areas:
+      "text card1 card2"
+      "card3 card4 .";
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 4rem;
+}
+
+.text-planif {
+    grid-area: text;
+}
+
+/* card-f */
+    .card-f {
+        background: white;
+        border: 1px solid var(--color-main-light);
+        border-radius: 12px;
+        padding: 1.5rem;
+       /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); */
+        text-align: justify;
+        border-radius: 0;
+        height: 250px;
+        width: 320px;
+        margin: auto;
+        position: relative;
+
+        clip-path: polygon(
+            0 0,                    /* haut gauche */
+            calc(100% - 20px) 0,    /* haut droit coupé */
+            100% 20px,              /* coin haut droit diagonal */
+            100% 100%,              /* bas droit normal */
+            20px 100%,              /* coin bas gauche diagonal */
+            0 calc(100% - 20px)     /* bas gauche coupé */
+          );
+      }
+  
+      .card-f img {
+        max-width: 120px;
+        margin-bottom: 1rem;
+      }
+  
+      .card-f h3 {
+          color: #444;
+          text-transform: uppercase;
+          font-size: 1rem;
+          font-weight: bold;
+          margin-top: 10px;
+      }
+  
+      .card-f p {
+          margin-top: 15px;
+          color: #333;
+      }
+/* card-f */
+
+/* plusButton */
+.plusButton {
+    /* Config start */
+    --plus_sideLength: 2.4rem;
+    --plus_topRightTriangleSideLength: 0.9rem;
+    /* Config end */
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    width: var(--plus_sideLength);
+    height: var(--plus_sideLength);
+    background-color: var(--clr);
+    overflow: hidden;
+    z-index: 2;
+  }
+  
+  .plusButton::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-width: 0 var(--plus_topRightTriangleSideLength) var(--plus_topRightTriangleSideLength) 0;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+  }
+  
+  .plusButton:hover {
+    cursor: pointer;
+  }
+  
+  .plusButton:hover::before {
+    --plus_topRightTriangleSideLength: calc(var(--plus_sideLength) * 2);
+  }
+  
+  .plusButton:focus-visible::before {
+    --plus_topRightTriangleSideLength: calc(var(--plus_sideLength) * 2);
+  }
+  
+  .plusButton>.plusIcon {
+    fill: white;
+    width: calc(var(--plus_sideLength) * 0.7);
+    height: calc(var(--plus_sideLength) * 0.7);
+    z-index: 1;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+  }
+  
+  .plusButton:hover>.plusIcon {
+    fill: black;
+    transform: rotate(180deg);
+  }
+  
+  .plusButton:focus-visible>.plusIcon {
+    fill: black;
+    transform: rotate(180deg);
+  }
+/* plusButton */
+
+/* modal content */
+.preview-box {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  width: 320px;
+  z-index: 999;
+  padding: 15px;
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.preview-box img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.preview-box p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-8px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+/* modal content */
+
+/* ask formations */
+
+.ask-formations {
+    padding: 3rem 1rem;
+    margin: auto;
+    width: 90%;
+    margin-top: 50px;
+}
+
+.h-askf {
+    color: var(--color-main);
+    font-size: 2.5rem;
+    font-weight: 600;
+    border-bottom: 1px dashed var(--color-main-light);
+    width: 50%;
+    padding-bottom: 5px;
+}
+
+.question {
+    font-weight: 350;
+
+}
+
+/* formualire de demandes */
+
+
+
+form#asking {
+    max-width: 800px;
+    margin: auto;
+    background: var(--color-main-light);
+  }
+
+  select:invalid {
+    color: #6c757d;
+  }
+
+  ::placeholder {
+    color: #adb5bd;
+    opacity: 1;
+  }
+
+  .btn-primary {
+    transition: background-color 0.3s;
+  }
+
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+
+.blockquote {
+    color: #444;
+    font-size: 15px;
+}
+
+.sending {
+    background: var(--second-color);
+    padding: 0.8rem;
+    color: whitesmoke;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 0;
+    transition: .3s ease-in-out;
+}
+
+.sending:hover {
+    border-radius: 10px;
+    background: var(--second-color);
+    color: whitesmoke;
+}
+
+
+.vers-ctpage {
+    color: var(--second-color);
+}
+
+/* Responsive improvements */
+
+@media (max-width: 992px) {
+  .cards-planif {
+    grid-template-areas:
+      "text"
+      "card1"
+      "card2"
+      "card3"
+      "card4";
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .card-f {
+    width: 90%;
+    height: auto;
+    margin: 1rem auto;
+  }
+
+  .h-planif {
+    width: 100%;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-f h1 {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+
+  .planif {
+    padding: 2rem 1rem;
+  }
+
+  form#asking {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .sending {
+    width: 100%;
+  }
+}
+
+
+/* ask formations */
